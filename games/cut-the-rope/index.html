@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cut The Rope</title>
-
     <link rel="stylesheet" href="../../styles.css">
 
     <style>
@@ -14,35 +13,39 @@
             padding: 0;
             color: white;
             font-family: Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
             text-align: center;
-            padding: 15px;
         }
 
-        /* Jogo horizontal 16:9 */
+        h1 {
+            margin-top: 25px;
+        }
+
         .game-wrapper {
             width: 100%;
-            max-width: 1000px;
-            margin: auto;
+            max-width: 1400px; /* Aumentei o máximo */
+            margin: 20px auto;
             position: relative;
         }
 
         .game-wrapper iframe {
             width: 100%;
-            aspect-ratio: 16 / 9; /* PROPORÇÃO HORIZONTAL */
+            height: calc(100vw * 0.56); /* 16:9 baseado na largura total do dispositivo */
+            max-height: 80vh;          /* Não passa de 80% da tela */
             border: none;
             border-radius: 12px;
-            background: #000;
+            background: black;
+        }
+
+        @media (min-width: 1400px) {
+            .game-wrapper iframe {
+                height: 800px; /* PC tela grande */
+            }
         }
 
         a {
             color: #6f7dff;
-            text-decoration: none;
             font-weight: bold;
+            text-decoration: none;
         }
 
         a:hover {
@@ -50,22 +53,17 @@
         }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
+    <h1>Cut The Rope</h1>
+    <p>Play the classic Cut The Rope game below!</p>
 
-        <h1>Cut The Rope</h1>
-        <p>Play the classic Cut The Rope game below!</p>
-
-        <div class="game-wrapper">
-            <iframe src="https://ctrhome.github.io/cuttherope.ie/"></iframe>
-        </div>
-
-        <br><br>
-        <a href="../../index.html">← Back to Home</a>
-
+    <div class="game-wrapper">
+        <iframe src="https://ctrhome.github.io/cuttherope.ie/"></iframe>
     </div>
+
+    <br>
+    <a href="../../index.html">← Back to Home</a>
 
 </body>
 </html>
