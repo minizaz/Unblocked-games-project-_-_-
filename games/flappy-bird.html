@@ -12,22 +12,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         height: 100vh;
         overflow: hidden;
-        font-family: sans-serif;
+        font-family: Arial, sans-serif;
     }
 
-    /* BOTÃO HOME GRANDE */
+    /* BOTÃO HOME AJUSTADO */
     .home-btn {
         background: #00aaff;
         color: white;
         text-decoration: none;
-        padding: 15px 30px;
-        font-size: 26px;
+        padding: 12px 24px;
+        font-size: 22px;
         font-weight: bold;
         border-radius: 12px;
-        margin-top: 15px;
+        margin-bottom: 20px;
         box-shadow: 0 0 10px #00aaff;
     }
 
@@ -35,21 +35,25 @@
         background: #0088cc;
     }
 
-    iframe {
-        width: 100vw;
-        height: calc(100vh - 100px);
+    /* TAMANHO MÉDIO DO JOGO */
+    .game-frame {
+        width: 750px;
+        max-width: 95vw;
+        height: 420px;
         border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 20px #000;
     }
 </style>
 </head>
 
 <body>
 
-    <!-- BOTÃO HOME GRANDE -->
-    <a class="home-btn" href="/index.html">HOME</a>
+    <!-- BOTÃO HOME CORRIGIDO -->
+    <a class="home-btn" href="https://minizaz.github.io/minizazstash/">HOME</a>
 
-    <!-- JOGO EMBEDADO -->
-    <iframe src="https://flappybird.io/" allowfullscreen></iframe>
+    <!-- JOGO CENTRALIZADO E MÉDIO -->
+    <iframe class="game-frame" src="https://flappybird.io/" allowfullscreen></iframe>
 
 </body>
 </html>
